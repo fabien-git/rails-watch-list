@@ -8,5 +8,14 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "components/card";
+@import "components/navbar";
+@import "components/banner";
 @import "components/index";
 @import "pages/index";
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}

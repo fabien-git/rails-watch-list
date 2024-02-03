@@ -1,12 +1,50 @@
-.navbar-lewagon {
+.flex{
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo{
+  background-image: asset-url('8059.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+nav {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      a {
+        text-decoration: none;
+        color: initial;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        display: flex; // Utilise flex pour centrer verticalement
+        align-items: center;
+        height:60px;
+        border-bottom: 4px solid transparent;
+        padding:0 4px;
+        transition: 0.3s all;
+
+
+        &:hover {
+          border-bottom: 4px solid blue;
+        }
+      }
+    }
+  }
 }

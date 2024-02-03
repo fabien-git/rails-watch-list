@@ -1,0 +1,33 @@
+<%= render "layouts/navbar" %>
+<%= render "layouts/banner" %>
+
+<div class="container">
+  <div id="title-list">
+    <h1>Votre liste : <%=@list.name %></h1>
+     <%= link_to "Add a movie", new_list_bookmark_path(@list), id:"add_movie" %>
+</div>
+
+  <ul class="cards">
+    <% @bookmarks.each do |bookmark| %>
+      <li class="card-show" >
+        <div class="title-image" style="background-image:url('<%= bookmark.movie.poster_url%>');background-size: cover; background-position: center;">
+        </div>
+        <div class="title-card">
+          <p><%= bookmark.movie.title%></p>
+          <i class="fa-solid fa-circle"></i>
+          <%= bookmark.movie.rating%>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="title-overview">
+          <%= bookmark.movie.overview%>
+        </div>
+
+        <%= link_to "X",
+          bookmark_path(bookmark),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+          class: "close_card"
+        %>
+      </li>
+    <% end %>
+  </ul>
+</div>

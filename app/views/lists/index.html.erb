@@ -1,0 +1,17 @@
+<%= render "layouts/navbar" %>
+<%= render "layouts/banner" %>
+
+<div class="container">
+  <div id="title-list">
+    <h2 >MES LISTES</h2>
+     <%= link_to "Add a list", new_list_path, id:"add_movie" %>
+</div>
+<ul class="cards">
+<% @lists.each do |list| %>
+    <li class="card" style="background-image: url('<%=list.poster_url %>'); background-repeat: no-repeat; background-size: cover;">
+<%=link_to list.name , list_path(list) %>
+</li>
+<% end %>
+</ul>
+
+</div>
