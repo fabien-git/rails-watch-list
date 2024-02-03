@@ -8,6 +8,7 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "components/review";
 @import "components/card";
 @import "components/navbar";
 @import "components/banner";
@@ -18,4 +19,8 @@
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+}
+
+.yellow{
+  color: yellow;
 }

@@ -1,0 +1,22 @@
+#all-reviews{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.review{
+  width: 30%;
+  border: 1px solid grey;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 16px;
+  input{
+    width:80%;
+  }
+}
+
+.review_section{
+  border-top: 1px solid grey;
+}

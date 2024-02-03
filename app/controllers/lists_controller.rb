@@ -20,11 +20,16 @@ class ListsController < ApplicationController
   end
 
   def show
+    @review = Review.new
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks
     @wallpaper = "#{@list.poster_url.strip}"
     @mainTitle = @list.name
     @filter =" filter:grayscale(1)"
+    @reviews = Review.where(list: params[:id] );
+
+    puts"------------------------"
+    puts @reviews
   end
 
   private

@@ -1,0 +1,39 @@
+<div class="review">
+<%= simple_form_for [@list, @review] do |f| %>
+<%= f.input :comment  %>
+<i class="fa-solid fa-star star" data-number="1"></i>
+<i class="fa-solid fa-star star" data-number="2"></i>
+<i class="fa-solid fa-star star" data-number="3"></i>
+<i class="fa-solid fa-star star" data-number="4"></i>
+<i class="fa-solid fa-star star" data-number="5"></i>
+<%= f.hidden_field :rating, value: "valeur_masquée", class:"hidden_input" %>
+<script>
+  console.log("ok");
+  // Initialisation des variables
+  stars = document.querySelectorAll('.fa-solid.fa-star.star');
+  rating = document.querySelector('.hidden_input');
+
+  // Display The correct number of yellow Stars
+  function yellowStar(nb){
+    stars.forEach((star, id) => {
+      if (id < nb) {
+      star.classList.add('yellow');
+      } else {
+        star.classList.remove('yellow');
+      }
+    })
+  }
+  stars.forEach((star) => {
+    star.addEventListener('click', (e)=>{
+      star.classList.toggle('yellow');
+      yellowStar(star.dataset.number);
+      //return value rating
+      rating.value = star.dataset.number;
+    })
+  })
+</script>
+<br>
+<br>
+<%= f.submit "Valider" %>
+<% end %>
+</div>

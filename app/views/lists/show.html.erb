@@ -1,6 +1,7 @@
 <%= render "layouts/navbar" %>
 <%= render "layouts/banner" %>
 
+
 <div class="container">
   <div id="title-list">
     <h1>Votre liste : <%=@list.name %></h1>
@@ -29,5 +30,20 @@
         %>
       </li>
     <% end %>
+
+
   </ul>
+
+  <section class="review_section" >
+<div class="container flex">
+    <ul>
+      <% @reviews.each do |review| %>
+      <li><%= review.comment %></li>
+      <% end %>
+    </ul>
+<%= render "review_new" %>
+</div>
+</section>
+
+
 </div>
