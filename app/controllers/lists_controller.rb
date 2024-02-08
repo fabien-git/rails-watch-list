@@ -28,6 +28,7 @@ class ListsController < ApplicationController
     @filter =" filter:grayscale(1)"
     @reviews = Review.where(list: params[:id] );
 
+
     puts"------------------------"
     puts @reviews
   end

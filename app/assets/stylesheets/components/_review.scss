@@ -20,3 +20,25 @@
 .review_section{
   border-top: 1px solid grey;
 }
+
+.review_comment{
+  margin: 10px 0;
+}
+
+.reviews_list li{
+  border-bottom: 1px solid #9c9c9c;
+  list-style: none;
+}
+
+.reviews_list li i{
+  color: yellow
+}
+
+.reviews_list{
+  padding:10px 32px;
+}
+.reviews_list_inline span {
+  font-size: 14px;
+  font-style: italic;
+  color: grey
+}
