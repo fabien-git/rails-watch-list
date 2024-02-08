@@ -8,7 +8,7 @@
 
 .review{
   width: 30%;
-  border: 1px solid grey;
+
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border-radius: 4px;
   padding: 16px;
@@ -28,6 +28,8 @@
 .reviews_list li{
   border-bottom: 1px solid #9c9c9c;
   list-style: none;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .reviews_list li i{
@@ -36,9 +38,25 @@
 
 .reviews_list{
   padding:10px 32px;
+  width:70%;
 }
 .reviews_list_inline span {
   font-size: 14px;
   font-style: italic;
   color: grey
+}
+
+
+.reviews_list h3{
+  margin-bottom: 32px;
+  font-size: 48px;
+  font-weight: bolder;
+
+}
+
+.flex_review{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 32px;
 }
