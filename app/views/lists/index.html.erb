@@ -9,7 +9,14 @@
 <ul class="cards">
 <% @lists.each do |list| %>
     <li class="card" style="background-image: url('<%=list.poster_url %>'); background-repeat: no-repeat; background-size: cover;">
-<%=link_to list.name , list_path(list) %>
+<%=link_to list.name ,
+ list_path(list),
+  data: { turbo_confirm: "Are you sure?" } %>
+<%=link_to "X",
+ list_path(list),
+           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+          class: "suppress"
+ %>
 </li>
 <% end %>
 </ul>
